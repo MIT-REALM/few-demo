@@ -126,7 +126,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/Eff47jTzEPwQ" frameborder="0" allow="autoplay; encrypted-media"
+          <iframe src="https://www.youtube.com/embed/Eff47jTzEPw" frameborder="0" allow="autoplay; encrypted-media"
             allowfullscreen></iframe>
         </div>
       </div>
@@ -155,17 +155,17 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/NPO_extra.png" alt="Neural Projection Operator"/>
+        <img src="static/images/systems.png" alt="Example setups"/>
         <h2 style="font-size:15px" class="subtitle has-text-centered">
-          Neural Projection Operator (NPO):
-          We use binary classifier to learn decision boundaries alongwith gradient-based projection for ensuring constraint feasibility of low dimensional environment variable. Fig shows the application of NPO on static obstacles that should be present around a given racetrack
+          Systems considered in the work:
+          We consider 'model' and 'true' dynamic system, where 'model' system represents an approximation of the 'true' system to be tested. The 'model' system cannot completely represent the 'true' dynamics, which leads to difference in failure sets. Our method focuses on discovering the failures of the 'true' dynamic system with limited demonstrations. Fig (a) and (c) show the model dynamics, for true systems shown in Fig (b, Push-T system) and (d, F1-Tenth system) respectively. The Push-T model dynamics ignores the robot dynamics and kinematics of the manipulator, and only focuses on contact dynamics between the T-block and end-effector. Similarly, the F1-Tenth model dynamics assumes a simplified bicycle model, and ignores lateral dynamics. 
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/Latent_VAE_extra.png"  alt="Learning Sequence EVs using AutoEncoder"/>
+        <img src="static/images/venn_diagram.png"  alt="Failure Venn Diagram"/>
         <h2 style="font-size:15px" class="subtitle has-text-centered">
-          Latent Variable Encoding: We use this approach for desigining sequences that must be temporally consistent and represent realistic environment variables using an AutoEncoder that learns the frequency-domain representation of control input signals.
+          Venn diagram showing the various sets of failures considered in our work.  
         </h2>
       </div>
   </div>
@@ -178,16 +178,7 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@ARTICLE{10669181,
-        author={Parashar, Anjali and Yin, Ji and Dawson, Charles and Tsiotras, Panagiotis and Fan, Chuchu},
-        journal={IEEE Robotics and Automation Letters}, 
-        title={Learning-Based Bayesian Inference for Testing of Autonomous Systems}, 
-        year={2024},
-        volume={9},   
-        number={10},
-        pages={9063-9070},
-        keywords={Testing;Optimization;Bayes methods;Dynamical systems;Convergence;Space exploration;Robots;Robot safety;probabilistic inference;formal methods in robotics and automation},
-        doi={10.1109/LRA.2024.3455782}}
+      <pre><code>To-Do
       </code></pre>
     </div>
 </section>
