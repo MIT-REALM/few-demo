@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Learning-based Bayesian Inference for Testing of Autonomous Systems</title>
+  <title>Failure Prediction from Limited Demonstrations</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -53,19 +53,19 @@
                   <span class="author-block">
                     <a href="https://ae.gatech.edu/directory/person/panagiotis-tsiotras" target="_blank">Joseph Zhang</a>,
                   </span><span class="author-block">
-                    <a href="https://chuchu.mit.edu/" target="_blank">Chuchu Fan</a><sup>1</sup>,
+                    <a href="https://chuchu.mit.edu/" target="_blank">Chuchu Fan</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><br>Massachusettes Institute of Technology</span>
+                    <span class="author-block"><br>Massachusetts Institute of Technology</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://drive.google.com/file/d/1cVqaOLybwNs6sbzsaMf7ME2Ns1qk-Oow/view?usp=sharing" target="_blank"
+                        <a href="static/pdfs/Failure_Prediction_From_Limited_Demos.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -75,23 +75,14 @@
                     </span>
                     <!-- Video Link. -->
                   <span class="link-block">
-                    <a href="https://youtu.be/kU5PSU8BHoQ" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://youtu.be/Eff47jTzEPw" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-youtube"></i>
                       </span>
                       <span>Video</span>
                     </a>
                   </span>
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/Supplementary_Material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+
 
                 <!-- ArXiv abstract Link >
                 <span class="link-block">
@@ -116,12 +107,11 @@
     <div class="hero-body">
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <img src="./static/images/intro.png" class="center-image"
+          <img src="./static/images/Method_overview.png" class="center-image"
           alt="Method Description" />
           <h2 class="subtitle has-text-centered">
           <br />
-          Overview of our approach. We use learning-based Bayesian inference to find failure modes of a robotic system by finding environmental agents such as obstacles, reference paths that lead to failure. 
-
+          We use Gaussian Process for learning a failure prediction model from a combination of simulation and hardware data, while restricting the hardware demonstrations. Our method utilizes a combination of Bayesian inference and Gaussian Process regression to learn a failure prediction model that can accurately predict failures which cannot be retrieved from simulation alone.  
           </h2>
         </div>
       </div>
@@ -136,7 +126,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/kU5PSU8BHoQ" frameborder="0" allow="autoplay; encrypted-media"
+          <iframe src="https://www.youtube.com/embed/Eff47jTzEPwQ" frameborder="0" allow="autoplay; encrypted-media"
             allowfullscreen></iframe>
         </div>
       </div>
@@ -150,8 +140,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>For safe operation of robotic systems, it is important to accurately understand its failure modes using prior testing. Hardware testing of robotic infrastructure is known to be extremely slow and costly. Instead, failure prediction in simulation can help in analyzing the system before deployment. Conventionally, large-scale na\"ive Monte Carlo simulations are used for testing; however, this method is only suitable for testing average system performance. For safety-critical systems, worst-case performance is more crucial as failures are often rare events, and the size of test batches increases substantially to discover rare occurrences of failures. Rare-event sampling methods can be helpful; however, they exhibit slow convergence and cannot handle constraints. 
-            This research introduces a novel sampling-based testing framework for autonomous systems which bridges these gaps by utilizing a discretized gradient-based second-order Langevin algorithm combined with learning-based techniques for constrained sampling of failure modes. Our method can predict more diverse failures by exploring the search space efficiently and ensures feasibility with respect to temporal and implicit constraints. We demonstrate the application of our testing methodology on two categories of testing problems, via simulations and hardware experiments. Our method discovers upto 2X failures compared to naive Random Walk sampling, with only half of the sample size.      </p>
+          <p>Prediction of failures in real-world robotic systems either requires accurate model information or extensive testing. Partial knowledge of the system model makes simulation-based failure prediction unreliable. Moreover, obtaining such demonstrations is expensive, and could potentially be risky for the robotic system to repeatedly fail during data collection. This work presents a novel three-step methodology for discovering failures that occur in the true system by using a combination of a limited number of demonstrations from the true system and the failure information processed through sampling-based testing of a model dynamical system. Given a limited budget N of demonstrations from true system and a model dynamics (with potentially large modeling errors), the proposed methodology comprises of a) exhaustive simulations for discovering algorithmic failures using the model dynamics; b) design of initial N1 demonstrations of the true system using Bayesian inference to learn a Gaussian process regression (GPR)-based failure predictor; and c) iterative N - N1 demonstrations of the true system for updating the failure predictor. To illustrate the efficacy of the proposed methodology, we consider: a) the failure discovery for the task of pushing a T block to a fixed target region with UR3E collaborative robot arm using a diffusion policy; and b) the failure discovery for an F1-Tenth racing car tracking a given raceline under an LQR control policy.  </p>
         </div>
       </div>
     </div>
